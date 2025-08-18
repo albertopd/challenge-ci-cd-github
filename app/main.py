@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 
-env = os.getenv("ENVIRONMENT", "Development")
+app_env = os.getenv("APP_ENV", "dev")
 
 #TODO: Change color based on environment
-st.success(f"Current environment: {env}")
+st.title(f"Current environment: {app_env}")
