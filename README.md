@@ -119,7 +119,7 @@ This setup ensures that only tested and approved code reaches production, while 
 ### Streamlit App on Prod
 ![Streamlit App on Prod](screenshots/prod_environment.png)
 
-## 📦 Requirements
+## 📋 Requirements
 
 ### App Requirements
 ```
