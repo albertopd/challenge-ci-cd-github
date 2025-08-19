@@ -29,5 +29,4 @@ jobs:
               # We don't have anything to do here since Streamlit Cloud will auto-deploy the branch
               # This is just a simulated deploy, showing the different destinations on Streamlit Cloud
               # for each environment
-              run: 
-                echo "🚀 App deployed to ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'qa' && 'qa' || 'dev' }} environment => ${{ vars.APP_URL }}"
+              run: echo "🚀 App deployed to ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'qa' && 'qa' || 'dev' }} environment => ${{ vars.APP_URL }}"
