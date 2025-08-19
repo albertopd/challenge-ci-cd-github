@@ -1,9 +1,11 @@
 import os
 from streamlit.testing.v1 import AppTest
 
-app_env = os.getenv("APP_ENV", "dev")
-
 def test_app_title():
     """The app title is displayed correctly"""
     at = AppTest.from_file("app/main.py").run()
-    assert f"{app_env.upper()} Environment" in at.title[0].value
+
+    app_env = at.secrets.get("APP_ENV", os.getenv("APP_ENV", "dev"))
+    color = {"prod": "red", "qa": "orange"}.get(app_env, "green")
+
+    assert at.title[0].value == f":{color}[{app_env.upper()} Environment]"
