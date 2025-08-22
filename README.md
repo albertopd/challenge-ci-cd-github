@@ -39,6 +39,19 @@ challenge-ci-cd-github/
     └── config.toml          # Streamlit app configuration
 ```
 
+## 📋 Requirements
+
+### App Requirements
+```
+streamlit==1.48.1
+```
+
+### Test & Lint Requirements
+```
+pytest==8.4.1
+flake8==6.1.0
+```
+
 ## ⚙️ GitHub Environment Setup
 
 Each GitHub environment is configured with an `APP_URL` variable that points to its respective Streamlit Cloud app. This enables environment-specific deployments and ensures the application always references the correct URL for Dev, QA, and Production.
@@ -119,23 +132,10 @@ This setup ensures that only tested and approved code reaches production, while 
 ### Streamlit App on Prod
 ![Streamlit App on Prod](screenshots/prod_environment.png)
 
-## 📋 Requirements
-
-### App Requirements
-```
-streamlit==1.48.1
-```
-
-### Test & Lint Requirements
-```
-pytest==8.4.1
-flake8==6.1.0
-```
-
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-- [Alberto Pérez Dávila](https://github.com/albertopd)
+[Alberto Pérez Dávila](https://github.com/albertopd)
